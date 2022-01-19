@@ -7,17 +7,19 @@
             // Memoize the primes; if there is a need for a bigger prime than is
             // memoized, the Primes object will do its buildPrimes method to
             // memoize whatever number of primes is needed.
-
-            System.out.println(isBrilliant(121));
-    //        p = new Primes(50);
+//
+//            System.out.println(isBrilliant(49));
+//            System.out.println(isBrilliant(5));
+//            System.out.println(isBrilliant(14));
+            p = new Primes(50);
     //        System.out.println(p.toString());
     //		System.out.println(p.get());
     //		System.out.println(p.isPrime(37));
     //		System.out.println(p.get());
     //		System.out.println(p.isPrime(2701));
-    //		System.out.println(p.get());
-    //		Brilliant b = new Brilliant(20);  // stores arraylist of 20 brilliant numbers
-    //		System.out.println(b.getBrilliants());
+    		System.out.println(p.get());
+    		Brilliant b = new Brilliant(20);  // stores arraylist of 20 brilliant numbers
+    		System.out.println(b.getBrilliants());
         }
 
         // Static: One copy for the whole class
@@ -37,7 +39,7 @@
         public static boolean isBrilliant(int n) {
             Primes primeList = new Primes(1);
             primeList.buildPrimes(n/2);
-            System.out.println(primeList.get());
+//            System.out.println(primeList.get());
 
             for(int number : primeList.get()) {
                 if(n % number == 0) {
